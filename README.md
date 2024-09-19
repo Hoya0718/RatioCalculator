@@ -1,7 +1,8 @@
 # RatioCalculator
-** 처음부터 끝까지 혼자 만들어보는 프로젝트 feat.정욱아 잘 써라
+처음부터 끝까지 혼자 만들어보는 프로젝트 feat.정욱아 잘 써라
 ---
-###H3,typescript-interface예제
+### typescript-interface예제
+```
 interface Person {
   name: string; // 이름: 문자열 타입
   age: number;  // 나이: 숫자 타입
@@ -17,3 +18,4 @@ const person: Person = {
 };
 
 person.greet();
+```
