@@ -1,6 +1,7 @@
 import React, { useState } from 'react'; // useState 훅을 가져옵니다.
-import SearchBar from './components/SearchBar/searchbar'; // SearchBar 컴포넌트를 가져옵니다.
-
+import SearchBar from './components/SearchBar/SearchBar'; // SearchBar 컴포넌트를 가져옵니다.
+import ListBox from './components/ListBox/ListBox';
+import PlusBtn from './components/PlusBtn/PlusBtn';
 const App: React.FC = () => {
   const [search, setSearch] = useState<string>(""); // 검색어 상태를 정의합니다.
 
@@ -15,11 +16,16 @@ const App: React.FC = () => {
     <div className="App">
       <header className="App-header">
         <h1>레시피 재료비율 계산기</h1>
+        <br/>
+        <PlusBtn></PlusBtn>
         <SearchBar 
           value={search} // SearchBar에 value를 전달합니다.
           onChange={handleSearchChange} // onChange 핸들러를 전달합니다.
         />
       </header>
+      <section>
+        <ListBox></ListBox>
+      </section>
     </div>
   );
 }
