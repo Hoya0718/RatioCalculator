@@ -4,7 +4,20 @@ import ListBox from './components/ListBox/ListBox';
 import PlusBtn from './components/PlusBtn/PlusBtn';
 const App: React.FC = () => {
   const [search, setSearch] = useState<string>(""); // 검색어 상태를 정의합니다.
-
+  const [title,setTitle] = useState<string>('레시피 재료비율 계산기');
+  const [clicked, setClicked] = useState<boolean>(false);
+  const changeH1 = () => {
+    
+    if(!clicked){
+      setTitle('잘 써라 ㅋㅋ');
+      console.log(clicked);
+    }
+    else{
+      setTitle('레시피 재료비율 계산기');
+      console.log(clicked);
+    }
+    setClicked(prev => !prev);
+  }
   // onChange 핸들러 정의
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const searchValue = event.target.value; // 입력 필드의 값을 가져옵니다.
@@ -15,13 +28,12 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>레시피 재료비율 계산기</h1>
+        <h1>{title}</h1>
+        <button onClick={changeH1}>클릭하지 마시오</button>
+        <br/>
+        <br/>
         <br/>
         <PlusBtn></PlusBtn>
-        <SearchBar 
-          value={search} // SearchBar에 value를 전달합니다.
-          onChange={handleSearchChange} // onChange 핸들러를 전달합니다.
-        />
       </header>
       <section>
         <ListBox></ListBox>
