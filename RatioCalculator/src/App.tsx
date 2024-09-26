@@ -37,10 +37,10 @@ const App: React.FC = () => {
         />
         <table border={1}>
           <thead>
-            <th>No</th><th>리스트명</th>
+            <th>No</th><th>리스트명</th><th></th>
           </thead>
           <tbody>
-            <td>1</td><td>아아</td>
+            <td>1</td><td>아아</td><td><button>삭제</button></td>
           </tbody>
         </table>
       </section>
