@@ -24,17 +24,26 @@ const App: React.FC = () => {
       </header>
       <section>
         {/* Content can go here, like a list of materials */}
+
+        <div style={{ display: "flex", justifyContent: "center" }}>
+          <button onClick={() => openModal('addList')}>Add List</button>
+          <button onClick={() => openModal('addMaterial')}>Add Material</button>
+        </div>
+        <MyModal
+          propText={modalType === 'addList' ? 'Add a New List' : 'Add a New Material'}
+          isOpen={isOpen}
+          closeModal={closeModal}
+          formType={modalType} // modalType이 null일 수 있지만 허용하도록 변경
+        />
+        <table border={1}>
+          <thead>
+            <th>No</th><th>리스트명</th>
+          </thead>
+          <tbody>
+            <td>1</td><td>아아</td>
+          </tbody>
+        </table>
       </section>
-      <div style={{display: "flex", justifyContent : "center"}}>
-        <button onClick={() => openModal('addList')}>Add List</button>
-        <button onClick={() => openModal('addMaterial')}>Add Material</button>
-      </div>
-      <MyModal
-        propText={modalType === 'addList' ? 'Add a New List' : 'Add a New Material'}
-        isOpen={isOpen}
-        closeModal={closeModal}
-        formType={modalType} // modalType이 null일 수 있지만 허용하도록 변경
-      />
     </div>
   );
 };

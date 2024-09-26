@@ -8,13 +8,12 @@ const AddListForm: React.FC<{ onClose: () => void }> = ({ onClose }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
-        List Name:
-        <input type="text" required />
-      </label>
-      <button type="submit">Add List</button>
-    </form>
+    <table border={1}>
+                <tbody>
+                    <td>리스트 명</td><td>   <input type="text" required /></td>
+                    <td><button type="button">리스트 추가</button></td>
+                </tbody>
+            </table>
   );
 };
 
