@@ -17,6 +17,7 @@ const MyButton: React.FC<ButtonProps> = (
         <div>
             <button
                 onClick={onClick}
+                
                 style={{color : "blue", backgroundColor : "white", ...style}}    
             >
                 {children}

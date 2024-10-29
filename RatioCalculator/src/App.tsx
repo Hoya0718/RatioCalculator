@@ -5,13 +5,13 @@ import MyButton from './components/MyButton'
 const App: React.FC = () => {
   const [modalType, setModalType] = useState<'addList' | 'addMaterial' | null>(null);
   const [isOpen, setIsOpen] = useState(false);
-
   const openModal = (type: 'addList' | 'addMaterial') => {
     setModalType(type);
+
     setIsOpen(true);
   };
 
-  const closeModal = () => {
+  const closeModal = () =>  `1QA` {
     setIsOpen(false);
     setModalType(null); // Reset modal type when closing
   };
@@ -20,7 +20,6 @@ const App: React.FC = () => {
     <div>
       <header>
         <Title />
-        <hr />
       </header>
       <section>
         {/* Content can go here, like a list of materials */}
